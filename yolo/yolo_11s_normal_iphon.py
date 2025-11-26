@@ -22,8 +22,8 @@ tracker = EmissionsTracker(
 
 tracker.start()
 try:
-    result = model.train(data="/cluster/projects/vc/courses/TDT17/ad/Poles2025/Road_poles_iPhone/data.yaml", epochs=500, imgsz=1280, augmentations=custom_transforms)
+    result = model.train(data="/cluster/home/tomaber/roadpoles-tdt17/yolo/data.yaml", epochs=500, imgsz=1280, augmentations=custom_transforms)
 
 finally:
     tracker.stop()
-    val_results = model.val(data="/cluster/projects/vc/courses/TDT17/ad/Poles2025/Road_poles_iPhone/data.yaml", split="val")
+    val_results = model.val(data="/cluster/home/tomaber/roadpoles-tdt17/yolo/data.yaml", split="val")
