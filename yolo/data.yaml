@@ -1,0 +1,6 @@
+train: /cluster/projects/vc/courses/TDT17/ad/Poles2025/Road_poles_iPhone/images/Train
+val: /cluster/projects/vc/courses/TDT17/ad/Poles2025/Road_poles_iPhone/images/Test
+test: /cluster/projects/vc/courses/TDT17/ad/Poles2025/Road_poles_iPhone/images/Validate
+
+nc: 1
+names: ['pole']
