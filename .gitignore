@@ -209,3 +209,7 @@ __marimo__/
 dataset/
 .idea
 runs_11n/
+runs_11s_prepro_1280/
+yolo/runs768/
+detect/
+test_configs/
