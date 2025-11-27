@@ -4,7 +4,7 @@ from codecarbon import EmissionsTracker
 
 #/cluster/projects/vc/courses/TDT17/ad/Poles2025/roadpoles_v1/data.yaml
 
-model_path = "yolo11n.pt"
+model_path = "/cluster/home/tomaber/roadpoles-tdt17/yolo/runs/detect/train11/weights/best.pt"
 model = YOLO(model_path)
 
 custom_transforms = [
@@ -22,8 +22,8 @@ tracker = EmissionsTracker(
 
 tracker.start()
 try:
-    result = model.train(data="/cluster/home/tomaber/roadpoles-tdt17/yolo/data.yaml", epochs=500, imgsz=1280, augmentations=custom_transforms)
+    result = model.train(data="/cluster/projects/vc/courses/TDT17/ad/Poles2025/roadpoles_v1/data.yaml", epochs=500, imgsz=1280, augmentations=custom_transforms)
 
 finally:
     tracker.stop()
-    val_results = model.val(data="/cluster/home/tomaber/roadpoles-tdt17/yolo/data.yaml", split="val")
+    val_results = model.val(data="/cluster/projects/vc/courses/TDT17/ad/Poles2025/roadpoles_v1/data.yaml", split="val")
